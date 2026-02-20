@@ -1,5 +1,19 @@
 # Ateliers progressifs – API Platform Avance – Projet Marketplace
 
+## Liens vers les fichiers unitaires
+- [Atelier 01 — DTO Product et Category](atelier_01_dto_product_category_mapping.md)
+- [Atelier 02 — Provider collection Product](atelier_02_provider_collection_product.md)
+- [Atelier 03 — Processor ProductCreate](atelier_03_processor_productcreate.md)
+- [Atelier 04 — Processor OrderCreate + stock](atelier_04_processor_ordercreate_stock.md)
+- [Atelier 05 — Voter Product + security](atelier_05_voter_security_rules.md)
+- [Atelier 06 — Filtres standards + owner](atelier_06_filtres_standards_filtre_custom_owner.md)
+- [Atelier 07 — Optimisation N+1](atelier_07_optimisation_n_plus_1.md)
+- [Atelier 08 — Upload image](atelier_08_upload_image_vichuploader.md)
+- [Atelier 09 — Tests ApiTestCase](atelier_09_tests_apitestcase.md)
+- [Atelier 10 — Integration finale](atelier_10_integration_finale.md)
+
+Decompose en fichiers unitaires.
+
 ## Objectifs
 - Mettre en oeuvre les contraintes techniques du projet Marketplace.
 - Construire une progression du simple au complexe.
