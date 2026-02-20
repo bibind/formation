@@ -54,6 +54,13 @@ cs:
 db-test-ensure:
 	docker exec -i marketplace_db psql -U app -tc "SELECT 1 FROM pg_database WHERE datname='app_test'" | grep -q 1 || docker exec -i marketplace_db psql -U app -c "CREATE DATABASE app_test;"
 
+openapi:
+	$(MAKE) db-test-ensure
+	APP_ENV=test $(CONSOLE) doctrine:database:create
+	APP_ENV=test $(CONSOLE) doctrine:migrations:migrate --no-interaction --allow-no-migration
+	APP_ENV=test $(PHP) $(PROJECT_DIR)/bin/schema-update.php
+	APP_ENV=test $(PHP) $(PROJECT_DIR)/bin/openapi-export.php
+
 ci:
 	$(MAKE) up
 	if [ ! -f $(PROJECT_DIR)/vendor/autoload.php ]; then $(COMPOSER) install --no-interaction --working-dir=$(PROJECT_DIR); else echo "Composer dependencies already installed"; fi
