@@ -1,0 +1,9 @@
+api_platform:
+  mapping:
+    paths:
+      - '%kernel.project_dir%/src/Application/Dto'
+  formats:
+    jsonld: ['application/ld+json']
+    json: ['application/json']
+  defaults:
+    pagination_items_per_page: 30
